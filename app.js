@@ -28,8 +28,8 @@ const swaggerOption ={
 
 const swaggerJsDoc = swaggerJsdoc(swaggerOption);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
-
 app.use(express.json());
+app.use(cors());
 
 const MONGO_URI='mongodb+srv://60183377:tZdn51uuhue0cUdO@cluster0.61pnwkw.mongodb.net/ayuda?retryWrites=true&w=majority&appName=Cluster0';
 
