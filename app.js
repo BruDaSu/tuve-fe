@@ -16,6 +16,9 @@ const swaggerOption ={
         },
         servers: [
             {
+                url:'https://tuve-fe-production.up.railway.app/'
+            },
+            {
                 url: 'http://localhost:4435'
             }
         ]
