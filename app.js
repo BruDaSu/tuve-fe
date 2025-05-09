@@ -8,7 +8,7 @@ const app = express();
 
 const swaggerOption ={
     definition: {
-        openape: '3.0.0',
+        openapi: '3.0.0',
         info: {
             title: 'API de Alumnos',
             version: '1.0.0',
@@ -16,7 +16,7 @@ const swaggerOption ={
         },
         servers: [
             {
-                url:'https://tuve-fe-production.up.railway.app/'
+                url:'https://tuve-fe-production.up.railway.app'
             },
             {
                 url: 'http://localhost:4435'
