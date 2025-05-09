@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -31,7 +32,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 app.use(express.json());
 app.use(cors());
 
-const MONGO_URI='mongodb+srv://60183377:tZdn51uuhue0cUdO@cluster0.61pnwkw.mongodb.net/ayuda?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI=process.MONGO_URI;
 
 mongoose.connect(MONGO_URI).then(()=>{
     console.log('Se conecto exitosamente');
