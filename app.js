@@ -128,13 +128,13 @@ app.post('/alumnos', async (req, res) => {
  *         description: Error al listar personas
  */
 
-app.get('/alumnos',async (req, res) => {
-    try{
-        const listadoAlumnos = await Alumno.find();
-        res.status(200).json(listadoAlumnos);
-    }catch(err){
-        res.status(400).json({message: 'Error al registrar'});
-    }
+app.get('/personas', async (req, res) => {
+  try {
+    const listadoPersonas = await Person.find();
+    res.status(200).json(listadoPersonas);
+  } catch (err) {
+    res.status(400).json({ message: 'Error al listar las personas' });
+  }
 });
 
 app.listen(4435, ()=>{
