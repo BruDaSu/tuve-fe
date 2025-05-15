@@ -95,15 +95,39 @@ app.post('/alumnos', async (req, res) => {
 
 /**
  * @swagger
- * /alumnos:
- *  get:
- *      summary: Obtiene todos los alumnos
- *      responses:
- *          200:
- *              description: Lista completa de alumnos
- *          400:
- *              desription: Error al listar 
+ * /personas:
+ *   get:
+ *     summary: Obtiene todas las personas registradas
+ *     responses:
+ *       200:
+ *         description: Lista completa de personas
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   dni:
+ *                     type: string
+ *                   celular:
+ *                     type: string
+ *                   nombre:
+ *                     type: string
+ *                   apellidos:
+ *                     type: string
+ *                   fechaNacimiento:
+ *                     type: string
+ *                   departamento:
+ *                     type: string
+ *                   distrito:
+ *                     type: string
+ *                   observaciones:
+ *                     type: string
+ *       400:
+ *         description: Error al listar personas
  */
+
 app.get('/alumnos',async (req, res) => {
     try{
         const listadoAlumnos = await Alumno.find();
